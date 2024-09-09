@@ -4,9 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>rock-paper-scissors</title>
-    <script src="main.js"></script>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    
+    <div class="flex">
+        <div class="glass-effect">
+            <header>
+                <h1>Rock Paper Scissors</h1>
+            </header>
+            <main>
+                <section class="welcome-message">
+                    <h2>Welcome to the Rock Paper Scissors game!</h2>
+                    <p>Get ready to challenge the computer in this classic game. Here's how it works:</p>
+                    <p>Rules of the game</p>
+                    <ul>
+                        <li> Choose Rock, Paper, or Scissors to compete against the computer.</li>
+                        <li>Rock beats Scissors, Scissors beats Paper, and Paper beats Rock.</li>
+                        <li>The first player to win a highest number of rounds is the winner.</li>
+                        <li>After 6 rounds, the player with the highest score wins the game. Good luck!</li>
+                    </ul>
+                    <a href="game.html" id='startGameButton' class="play-button">Start Game</a>
+                </section>
+            </main>
+        </div>
+    </div>
+    <script>
+        document.getElementById('startGameButton').addEventListener('click', function(event){
+        event.preventDefault();
+        document.querySelector('.glass-effect').classList.add('.fade-out');
+        setTimeout(
+            function(){
+                window.location.href = 'game.html';
+            }, 200)
+        });
+    </script>
 </body>
 </html>
