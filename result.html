@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rock-paper-scissors</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="flex">
+        <section>
+            <header>
+                <h1 class="over">Game Over</h1>
+            </header>
+            <main>
+                <div>
+                    <section class="score-board">
+                        <h2>Final Scores</h2>
+                        <p>Player: <span id="playerScore">0</span> | Computer: <span id="computerScore">0</span></p>
+                    </section>
+                </div>
+                <p id="finalResult" class="round-result"></p>
+            </main>
+            <div class="btn-container">
+                <a href="game.html" class="btn-r">Replay</a>
+                <a href="index.html" class="btn-e">Exit</a>
+            </div>    
+        </section>
+    </div>
+    <script>
+        // Function to parse URL parameters
+        function getParams() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                playerScore: params.get('playerScore'),
+                computerScore: params.get('computerScore'),
+                result: params.get('result')
+            };
+        }
+
+        // Display the final scores and result
+        const { playerScore, computerScore, result } = getParams();
+        document.getElementById('playerScore').textContent = playerScore;
+        document.getElementById('computerScore').textContent = computerScore;
+        document.getElementById('finalResult').textContent = result;
+    </script>
+</body>
+</html>

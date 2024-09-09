@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rock-paper-scissors</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div>
+        <header>
+            <h1>Rock Paper Scissors</h1>
+        </header>
+        <main>
+            <div class="game-container">
+                <section class="score-board">
+                    <h2>Scoreboard</h2>
+                    <p>Player: <span id="playerScore">0</span> | Computer: <span id="computerScore">0</span></p>
+                </section>
+            </div>
+           <div class="game-control-con">
+            <section class="game-contorls">
+                <i id="rock" class="fa-solid fa-hand-back-fist" style="color: #6b6038; " title="Rock"></i>
+                <i id="paper" class="fa-solid fa-hand" style="color: #ffffff;" title="Paper"></i>
+                <i id="scissors" class="fa-solid fa-hand-scissors" style="color: #FFD43B;" title="Scissors"></i>
+            </section>
+           </div>
+           <p id="roundResult" class="round-result"></p>
+        </main>
+    </div>
+    <script>
+           // Add rotation animation
+        const icons = document.querySelectorAll('i');
+
+        icons.forEach(icon => {
+        icon.addEventListener('click', () => {
+        icon.style.transition = 'transform 0.5s ease';
+        icon.style.transform = 'rotate(360deg)';
+        
+        // Reset the rotation after the animation completes, so it can rotate again on next click
+        setTimeout(() => {
+            icon.style.transform = 'rotate(0deg)';
+            }, 500); // Match the transition duration
+        });
+        });
+    </script>
+    <script src="main.js"></script>
+    </body>
+</html>

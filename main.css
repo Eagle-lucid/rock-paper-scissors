@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url(image/14.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+/*This is a glass-effect that display a welcome message & rules of the game*/
+.glass-effect {
+    height: 400px;
+    width: 700px;
+    background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2));
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.5);
+    opacity: 0.95;
+    margin: 0 5px;
+    padding: 10px;
+    text-align: center;
+    transition: opacity 0.2s ease-out;
+}
+.fade-out {
+    opacity: 0;
+}
+header h1 {
+    font-size: 28px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    text-align: center;
+    text-wrap: wrap;
+    margin-bottom: 10px;
+    color: rgb(218, 165, 32);
+}
+.glass-effect h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: rgb(0, 0, 0);
+    text-transform: capitalize;
+}
+.glass-effect p {
+    font-family: sans-serif;
+    font-size: 18px;
+    margin-bottom: 2.5px;
+    color: rgb(0, 0, 0);
+    text-transform: capitalize;
+}
+.glass-effect ul {
+    list-style: square;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    margin-left: 20px;
+    margin-bottom: 2px;
+    text-align: left;
+    color: rgb(0, 0, 0);
+}
+
+.glass-effect .play-button{
+    width: 120px;
+    height: 50px;
+    background-color: goldenrod;
+    border: none;
+    border-radius: 15%;
+    margin-top: 20px;
+    padding: 10px;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 30px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.glass-effect .play-button:hover {
+    background-color: rgb(47, 228, 11);
+    transform: scale(1.1);
+}
+.glass-effect a {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    display: block;
+    text-decoration: none;
+}
+.glass-effect a:hover {
+    color: rgb(255, 255, 255, 0.8);
+}
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.score-board {
+    height: 100px;
+    width: 400px;
+    background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2));
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.5);
+    opacity: 0.95;
+    margin: 0 5px;
+    padding: 10px;
+    text-align: center;
+    transition: opacity 0.2s ease-out;
+}
+.score-board h2 {
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+    margin-bottom: 5px;
+    color: rgb(0, 0, 0);
+}
+.score-board p {
+    font-size: 20px;
+    font-family: sans-serif;
+}
+.game-control-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ i{
+    margin: 20px 10px 0 10px;
+    font-size: 70px;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 30px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+i:hover {
+    transform: scale(1.1);
+}
+i:active {
+    transform: rotate(360deg);
+    transition: transform 0.5s ease;
+}
+.round-result {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(255, 215, 0);
+    margin-top: 20px;
+    text-align: center;
+}
+.over {
+    font-size: 28px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    text-align: center;
+    text-wrap: wrap;
+    margin-bottom: 10px;
+    color: rgb(218, 32, 32);  
+}
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.btn-r {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(0, 78, 247);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 10px;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+.btn-r:hover{
+    background-color: rgb(0, 128, 0);
+    color: rgb(255, 255, 255);
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+}
+.btn-e {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 78, 247);
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 10px;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+.btn-e:hover {
+    background-color: rgb(247, 0, 0);
+    color: rgb(0, 0, 0);
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+}
